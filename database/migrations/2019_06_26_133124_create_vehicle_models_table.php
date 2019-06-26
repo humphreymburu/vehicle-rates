@@ -14,8 +14,11 @@ class CreateVehicleModelsTable extends Migration
     public function up()
     {
         Schema::create('vehicle_model', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('model_id');
             $table->timestamps();
+            $table->text('model_name')->nullable();
+            $table->integer('make_id')->nullable();
+            $table->engine = 'InnoDB';
         });
     }
 
