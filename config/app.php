@@ -23,7 +23,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel '.app()->version().' Boilerplate'),
+    'name' => env('APP_NAME', 'Running Cost Calculator '.app()->version().' AA Mileage Rates'),
 
     /*
     |--------------------------------------------------------------------------
@@ -178,8 +178,10 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        
 
         // Package Service Providers that aren't auto-discover...
+        Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
 
         // Application Service Providers...
         App\Providers\AppServiceProvider::class,
@@ -239,7 +241,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'FormBuilder' => Kris\LaravelFormBuilder\Facades\FormBuilder::class
         // Package Aliases
     ],
 ];
