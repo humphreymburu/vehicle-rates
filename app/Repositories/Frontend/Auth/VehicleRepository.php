@@ -3,6 +3,7 @@
 namespace App\Repositories\Frontend\Auth;
 
 use App\Models\Auth\User;
+use App\Models\Vehicle\Vehicle;
 use Illuminate\Http\UploadedFile;
 use App\Models\Auth\SocialAccount;
 use Illuminate\Support\Facades\DB;
@@ -24,7 +25,7 @@ class VehicleRepository extends BaseRepository
      */
     public function model()
     {
-       // return User::class;
+        return Vehicle::class;
     }
 
 
@@ -38,10 +39,9 @@ class VehicleRepository extends BaseRepository
     public function create(array $data)
     {
         return DB::transaction(function () use ($data) {
-            $user = parent::create([
-                'liscence_cost' => $data['liscence_cost'],
-                'parking_misc' => $data['last_name']
-                
+            $vehicle = parent::create([
+                'purchase_cost' => $data['purchase_cost'],
+                'category' => $data['category']
             ]);
 
             // Return the user object

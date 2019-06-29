@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class operations_cost extends Model
+class Subscription extends Model
 {
     //
 }

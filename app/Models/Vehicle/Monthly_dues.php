@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class monthly_dues extends Model
+class Monthly_dues extends Model
 {
     //
 }

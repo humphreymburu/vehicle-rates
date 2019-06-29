@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ccrange extends Model
+class Tyre_sizes extends Model
 {
     //
 }

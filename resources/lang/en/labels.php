@@ -121,6 +121,7 @@ return [
             'login_with' => 'Login with :social_media',
             'register_box_title' => 'Register',
             'register_button' => 'Register',
+            'save_button'=> 'Calculate',
             'remember_me' => 'Remember Me',
         ],
 
@@ -155,5 +156,13 @@ return [
                 'update_information' => 'Update Information',
             ],
         ],
+
+        
+        'vehicle' => [
+                'purchase_cost' => 'Actual Cost',
+                'category' => 'category',
+        ],
+        
+        
     ],
 ];

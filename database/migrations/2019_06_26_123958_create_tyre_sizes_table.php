@@ -16,8 +16,10 @@ class CreateTyreSizesTable extends Migration
         Schema::create('tyre_sizes', function (Blueprint $table) {
             $table->bigIncrements('tyre_sizes_id');
             $table->string('size')->nullable();
-            $table->decimal('cost', 8, 2)->nullable();
-            $table->text('type')->nullable();
+            $table->decimal('tyre_cost', 8, 2)->nullable();
+            $table->text('tyre_type')->nullable();
+            $table->float('km_tyre')->nullable();
+            $table->integer('tyre_no')->nullable();
             $table->timestamps();
             $table->engine = 'InnoDB';
         });

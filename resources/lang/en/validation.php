@@ -202,6 +202,8 @@ return [
             'old_password' => 'Old Password',
             'timezone' => 'Timezone',
             'language' => 'Language',
+            'purchase_cost' => 'Actual Car Cost',
+            'category' => 'Category',
         ],
     ],
 ];
