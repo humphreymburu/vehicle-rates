@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSubscriptionsTable extends Migration
+class AddForeignKeyCapacityTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateSubscriptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('subscriptions', function (Blueprint $table) {
-            $table->increments('subscription_id');
-            $table->decimal('subscription_cost', 8, 2)->nullable();
-            $table->integer('cat_id')->unsigned();
+        Schema::table('capacity', function (Blueprint $table) {
+            $table->foreign('car_id')->references('id')->on('vehicles');
         });
     }
-
 
     /**
      * Reverse the migrations.
@@ -28,6 +25,8 @@ class CreateSubscriptionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('subscriptions');
+        Schema::table('capacity', function (Blueprint $table) {
+            $table->foreign('car_id')->references('id')->on('vehicles')->onDelete('cascade');
+        });
     }
 }

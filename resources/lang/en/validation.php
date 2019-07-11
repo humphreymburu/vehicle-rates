@@ -204,6 +204,8 @@ return [
             'language' => 'Language',
             'purchase_cost' => 'Actual Car Cost',
             'category' => 'Category',
+            'parking_cost'  => 'Parking Fines Cleaning',
+            'subscriptions_cost' => 'Subscriptions',
         ],
     ],
 ];

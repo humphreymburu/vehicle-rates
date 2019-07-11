@@ -14,14 +14,13 @@ class CreateTyreSizesTable extends Migration
     public function up()
     {
         Schema::create('tyre_sizes', function (Blueprint $table) {
-            $table->bigIncrements('tyre_sizes_id');
+            $table->increments('tyre_sizes_id');
             $table->string('size')->nullable();
-            $table->decimal('tyre_cost', 8, 2)->nullable();
             $table->text('tyre_type')->nullable();
             $table->float('km_tyre')->nullable();
             $table->integer('tyre_no')->nullable();
+            $table->integer('vehicles_id')->unsigned();
             $table->timestamps();
-            $table->engine = 'InnoDB';
         });
     }
 

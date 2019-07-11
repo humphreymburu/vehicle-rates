@@ -34,6 +34,14 @@ class AuthTableSeeder extends Seeder
         $this->call(UserTableSeeder::class);
         $this->call(PermissionRoleTableSeeder::class);
         $this->call(UserRoleTableSeeder::class);
+        $this->call(TyreCostTableSeeder::class);
+        $this->call(TyreSizesTableSeeder::class);
+        $this->call(SubscriptionsTableSeeder::class);
+        $this->call(VehiclesTableSeeder::class);
+        $this->call(CapacityTableSeeder::class);
+        $this->call(CategoriesTableSeeder::class);
+        $this->call(RunningCostsTableSeeder::class);
+
 
         $this->enableForeignKeys();
     }

@@ -14,11 +14,12 @@
         {{ session('status') }}
     </div>
 @endif
-
-<div class="card-body">
+<div class="card-body" style="
+    width: 850px  !important;
+">
                     {{ html()->form('POST', route('frontend.vehicle.post'))->open() }}
                         <div class="row">
-                            <div class="col-12 col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     {{ html()->label(__('validation.attributes.frontend.purchase_cost'))->for('purchase_cost') }}
 
@@ -30,40 +31,113 @@
                                 </div><!--col-->
                             </div><!--row-->
 
-                            <div class="col-12 col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
-                                    {{ html()->label(__('validation.attributes.frontend.category'))->for('category') }}
-
-                                    {{ html()->text('category')
-                                        ->class('form-control')
-                                        ->placeholder(__('validation.attributes.frontend.category'))
-                                        ->attribute('maxlength', 191)
-                                        ->required() }}
+                                        <label for="category">Car Category:</label>
+                <select name="category" class="form-control" style="width:250px">
+                    <option value="">--- Select Car Category ---</option>
+                    @foreach ($categories as $key => $value)
+                    <option value="{{ $key }}">{{ $value }}</option>
+                    @endforeach
+                </select>
                                 </div><!--form-group-->
+                            </div><!--col-->
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                <label for="category">Engine Capacity:</label>
+                <select name="category" class="form-control" style="width:250px">
+                    <option value="">--- Select Capacity ---</option>
+                    @foreach ($capacities as $key => $value)
+                    <option value="{{ $key }}">{{ $value }}</option>
+                    @endforeach
+                </select>
+                                </div>
+                            </div>
+
+                        </div><!--row-->
+
+                        <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                            <label for="country">Select Tyre Type:</label>
+                <select name="country" class="form-control" style="width:250px">
+                    <option value="">--- Select Tyre Type ---</option>
+                    @foreach ($tyres as $key => $value)
+                    <option value="{{ $key }}">{{ $value }}</option>
+                    @endforeach
+                </select>
+            </div>
+            </div>
+            <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="state">Tyre Costs:</label>
+                <select name="state" class="form-control"style="width:250px">
+                <option>--Costs--</option>
+                </select>
+         
+                </div><!--form-group-->
                             </div><!--col-->
                         </div><!--row-->
 
                         <div class="row">
-                            <div class="col">
+                            <div class="col-md-4">
                                 <div class="form-group">
-                                   
+                                {{ html()->label(__('validation.attributes.frontend.parking_cost'))->for('parking_cost') }}
+
+{{ html()->text('parking_cost')
+    ->class('form-control')
+    ->placeholder(__('validation.attributes.frontend.parking_cost'))
+    ->attribute('maxlength', 150)
+    ->value(93500)
+    ->required()}}
                                 </div><!--form-group-->
                             </div><!--col-->
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                <label for="subscription">Subscription Category:</label>
+                <select name="subscription" class="form-control" style="width:250px">
+                    <option value="">--- Select Category ---</option>
+                    @foreach ($member_cat as $key => $value)
+                    <option value="{{ $key }}">{{ $value }}</option>
+                    @endforeach
+                </select>
+                                </div>
+                                </div>
+
+
+                                <div class="col-md-4">
+                                <div class="form-group">
+                                <label for="subs">Subscription Costs:</label>
+                <select name="subs" class="form-control"style="width:250px">
+                <option>--Subscription Cost--</option>
+                </select>
+                                </div>
+                                </div>
+
+
                         </div><!--row-->
 
                         <div class="row">
-                            <div class="col">
+                        <div class="col-md-4">
                                 <div class="form-group">
-
+                               
                                 </div><!--form-group-->
-                            </div><!--col-->
-                        </div><!--row-->
-
-                        <div class="row">
-                            <div class="col">
+                            </div>
+                            <div class="col-md-4">
                                 <div class="form-group">
+                               
                                 </div><!--form-group-->
-                            </div><!--col-->
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                               
+                                </div><!--form-group-->
+                            </div>
+                            
+                            <!--col-->
                         </div><!--row-->
 
                         @if(config('access.captcha.registration'))
@@ -96,9 +170,3 @@
         </div><!--col-->
     </div><!--row-->
 @endsection
-
-@push('after-scripts')
-    @if(config('access.captcha.contact'))
-        @captchaScripts
-    @endif
-@endpush

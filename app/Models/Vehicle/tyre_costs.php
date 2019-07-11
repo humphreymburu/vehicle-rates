@@ -4,7 +4,7 @@ namespace App\Models\Vehicle;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tyre_sizes extends Model
+class tyre_costs extends Model
 {
     public $timestamps = false;
 }

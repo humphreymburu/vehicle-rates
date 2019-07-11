@@ -40,6 +40,8 @@
         {!! script(mix('js/manifest.js')) !!}
         {!! script(mix('js/vendor.js')) !!}
         {!! script(mix('js/frontend.js')) !!}
+        <script type="text/javascript" src="{{URL::asset('js/custom.js')}}"></script>
+
         @stack('after-scripts')
 
         @include('includes.partials.ga')

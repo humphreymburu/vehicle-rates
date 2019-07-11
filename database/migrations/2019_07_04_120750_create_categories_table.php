@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSubscriptionsTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateSubscriptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('subscriptions', function (Blueprint $table) {
-            $table->increments('subscription_id');
-            $table->decimal('subscription_cost', 8, 2)->nullable();
-            $table->integer('cat_id')->unsigned();
+        Schema::create('categories', function (Blueprint $table) {
+            $table->increments('category_id');
+            $table->string('membership_category');
         });
     }
-
 
     /**
      * Reverse the migrations.
@@ -28,6 +26,6 @@ class CreateSubscriptionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('subscriptions');
+        Schema::dropIfExists('categories');
     }
 }

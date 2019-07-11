@@ -161,6 +161,8 @@ return [
         'vehicle' => [
                 'purchase_cost' => 'Actual Cost',
                 'category' => 'category',
+                'parking_cost'  => 'Parking Fines Cleaning',
+                'subscriptions_cost' => 'Subscriptions',
         ],
         
         

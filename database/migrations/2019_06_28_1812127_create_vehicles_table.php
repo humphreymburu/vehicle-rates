@@ -14,16 +14,14 @@ class CreateVehiclesTable extends Migration
     public function up()
     {
         Schema::create('vehicles', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->timestamps();
             $table->decimal('purchase_cost', 8, 2)->nullable();
             $table->string('category')->nullable();
-            $table->integer('annual_costs_id')->nullable();
-            $table->integer('ccrange_id')->nullable();
-            $table->integer('monthly_dues_id')->nullable();
-            $table->integer('subscription_id')->nullable();
-            $table->integer('type_sizes_id')->nullable();
             $table->year('year_manufacture')->nullable();
+            $table->decimal('fixed_cost')->nullable();
+            $table->decimal('operating_cost')->nullable();
+            $table->integer('sub_id')->unsigned();
             $table->uuid('uuid')->nullable();
             $table->engine = 'InnoDB';
         });

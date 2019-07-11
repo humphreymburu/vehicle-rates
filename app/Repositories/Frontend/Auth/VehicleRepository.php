@@ -38,10 +38,12 @@ class VehicleRepository extends BaseRepository
      */
     public function create(array $data)
     {
+
         return DB::transaction(function () use ($data) {
             $vehicle = parent::create([
                 'purchase_cost' => $data['purchase_cost'],
-                'category' => $data['category']
+                'category' => $data['category'],
+                //'tyresizes' => $data[$tyresizes],
             ]);
 
             // Return the user object
