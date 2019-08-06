@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddForeignKeyVehiclesTable extends Migration
+class AddForeignKeyFuelOperationCostTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddForeignKeyVehiclesTable extends Migration
      */
     public function up()
     {
-        Schema::table('vehicles', function (Blueprint $table) {
-            $table->foreign('sub_id')->references('subscription_id')->on('subscriptions');
+        Schema::table('operations', function (Blueprint $table) {
+            $table->foreign('fuel_id')->references('id')->on('fuel');
         });
     }
 
@@ -25,8 +25,8 @@ class AddForeignKeyVehiclesTable extends Migration
      */
     public function down()
     {
-        Schema::table('vehicles', function (Blueprint $table) {
-            $table->foreign('sub_id')->references('subscription_id')->on('subscriptions')->onDelete('cascade');
+        Schema::table('operations', function (Blueprint $table) {
+            $table->foreign('fuel_id')->references('id')->on('fuel')->onDelete('cascade');
         });
     }
 }

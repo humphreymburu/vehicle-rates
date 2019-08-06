@@ -23,18 +23,28 @@ class CapacityTableSeeder extends Seeder
             'id' => 1,
             'engine_cc' => 'upto 1000',
             'car_id' => 1,
+            'distance' => 20,
         ]);
 
         capacity::create([
             'id' => 2,
-            'engine_cc' => 'upto 850',
+            'engine_cc' => 'upto 1000',
             'car_id' => 2,
+            'distance' => 20,
         ]);
 
         capacity::create([
             'id' => 3,
-            'engine_cc' => '850-1000',
+            'engine_cc' => 'upto 850',
             'car_id' => 3,
+            'distance' => 18,
+        ]);
+
+        capacity::create([
+            'id' => 4,
+            'engine_cc' => '850-1050',
+            'car_id' => 4,
+            'distance' => 16,
         ]);
 
         $this->enableForeignKeys();

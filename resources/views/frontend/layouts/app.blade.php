@@ -25,7 +25,7 @@
     <body>
         @include('includes.partials.demo')
 
-        <div id="app">
+        <div id="app" class="wrapper">
             @include('includes.partials.logged-in-as')
             @include('frontend.includes.nav')
 

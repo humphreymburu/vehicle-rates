@@ -52,7 +52,7 @@ class VehicleHelper
         return floatval($floatString);
     }
 
-
+    
     
     /**
      * Introspects into the model validation to see if the field passed is required.

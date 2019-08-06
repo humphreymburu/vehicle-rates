@@ -25,7 +25,6 @@ class VehiclesTableSeeder extends Seeder
             'year_manufacture' => 2007,
             'fixed_cost' => 500000,
             'operating_cost' => 200000,
-            'sub_id' => 3,
             'uuid' => ''
         ]);
 
@@ -36,7 +35,6 @@ class VehiclesTableSeeder extends Seeder
             'year_manufacture' => 2000,
             'fixed_cost' => 400000,
             'operating_cost' => 50000,
-            'sub_id' => 2,
             'uuid' => ''
         ]);
 
@@ -47,7 +45,6 @@ class VehiclesTableSeeder extends Seeder
             'year_manufacture' => 2001,
             'fixed_cost' => 20000,
             'operating_cost' => 30000,
-            'sub_id' => 3,
             'uuid' => ''
         ]);
 

@@ -16,7 +16,8 @@ class CreateSubscriptionsTable extends Migration
         Schema::create('subscriptions', function (Blueprint $table) {
             $table->increments('subscription_id');
             $table->decimal('subscription_cost', 8, 2)->nullable();
-            $table->integer('cat_id')->unsigned();
+            $table->integer('sub_id')->unsigned()->nullable();
+            $table->integer('cat_id')->unsigned()->nullable();
         });
     }
 

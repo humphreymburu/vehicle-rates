@@ -17,6 +17,7 @@ class CreateCapacityTable extends Migration
             $table->increments('id');
             $table->string('engine_cc');
             $table->integer('car_id')->unsigned();
+            $table->decimal('distance', 4, 2)->unsigned()->nullable();
         });
     }
 

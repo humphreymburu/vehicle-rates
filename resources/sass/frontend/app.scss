@@ -11,3 +11,20 @@
 
 // Pages
 @import 'pages/dashboard';
+
+
+.table td, .table th {
+    padding: 0.3rem !important;
+  }
+
+h4 {
+    color: #055F43 !important;
+}
+
+.table-responsive {
+    margin-left: 4.5rem !important;
+}
+
+.wrapper {
+    background-color: #fcfefe;
+}

@@ -17,17 +17,23 @@
 <div class="card-body" style="
     width: 850px  !important;
 ">
-                    {{ html()->form('POST', route('frontend.vehicle.post'))->open() }}
+                    {{ html()->form('POST', route('frontend.vehicle.show'))->open() }}
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    {{ html()->label(__('validation.attributes.frontend.purchase_cost'))->for('purchase_cost') }}
+                                   
 
-                                    {{ html()->text('purchase_cost')
-                                        ->class('form-control')
-                                        ->placeholder(__('validation.attributes.frontend.purchase_cost'))
-                                        ->attribute('maxlength', 191)
-                                        ->required()}}
+
+                                        <label for="Purchase Cost"></label>
+
+
+{{ html()->label(__('validation.attributes.frontend.purchase_cost'))->for('purchase_cost') }}
+
+{{ html()->text('purchase_cost')
+    ->class('form-control')
+    ->placeholder(__('validation.attributes.frontend.purchase_cost'))
+    ->attribute('maxlength', 191)
+    ->required()}}
                                 </div><!--col-->
                             </div><!--row-->
 
@@ -46,7 +52,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                 <label for="category">Engine Capacity:</label>
-                <select name="category" class="form-control" style="width:250px">
+                <select name="capacity" class="form-control" style="width:250px">
                     <option value="">--- Select Capacity ---</option>
                     @foreach ($capacities as $key => $value)
                     <option value="{{ $key }}">{{ $value }}</option>
@@ -60,59 +66,52 @@
                         <div class="row">
                         <div class="col-12 col-md-6">
                             <div class="form-group">
-                            <label for="country">Select Tyre Type:</label>
-                <select name="country" class="form-control" style="width:250px">
-                    <option value="">--- Select Tyre Type ---</option>
-                    @foreach ($tyres as $key => $value)
-                    <option value="{{ $key }}">{{ $value }}</option>
-                    @endforeach
-                </select>
+                            <label for="oils">Oil Costs:</label>
+<select name='oils' class="form-control"style="width:250px" >
+                                    
+                                </select>
+                
             </div>
             </div>
             <div class="col-12 col-md-6">
             <div class="form-group">
-                <label for="state">Tyre Costs:</label>
-                <select name="state" class="form-control"style="width:250px">
-                <option>--Costs--</option>
-                </select>
-         
-                </div><!--form-group-->
+            <label for="drives">Drive</label>
+        <select name='drives' class="drive form-control" style="width:250px" >
+        <option value="0" disabled="true" selected="true">-- Select Drive--</option>
+        </select>
+
+
+      
+
+
+        </div><!--form-group-->
                             </div><!--col-->
                         </div><!--row-->
 
                         <div class="row">
                             <div class="col-md-4">
-                                <div class="form-group">
-                                {{ html()->label(__('validation.attributes.frontend.parking_cost'))->for('parking_cost') }}
-
-{{ html()->text('parking_cost')
-    ->class('form-control')
-    ->placeholder(__('validation.attributes.frontend.parking_cost'))
-    ->attribute('maxlength', 150)
-    ->value(93500)
-    ->required()}}
+        <div class="form-group">
+        <label for="services">Services</label>
+        <select name='services' class="form-control"style="width:250px" >
+        </select>
                                 </div><!--form-group-->
                             </div><!--col-->
 
                             <div class="col-md-4">
                                 <div class="form-group">
-                                <label for="subscription">Subscription Category:</label>
-                <select name="subscription" class="form-control" style="width:250px">
-                    <option value="">--- Select Category ---</option>
-                    @foreach ($member_cat as $key => $value)
-                    <option value="{{ $key }}">{{ $value }}</option>
-                    @endforeach
-                </select>
+                                
+                                <label for="repairs">Repairs</label>
+        <select name='repairs' class="form-control"style="width:250px" >
+        </select>
                                 </div>
                                 </div>
 
 
                                 <div class="col-md-4">
                                 <div class="form-group">
-                                <label for="subs">Subscription Costs:</label>
-                <select name="subs" class="form-control"style="width:250px">
-                <option>--Subscription Cost--</option>
-                </select>
+          <label for="tyres">Tyres</label>
+        <select name='tyres' class="form-control"style="width:250px" >
+        </select>
                                 </div>
                                 </div>
 
@@ -122,12 +121,28 @@
                         <div class="row">
                         <div class="col-md-4">
                                 <div class="form-group">
-                               
+                                <label for="subscription">Subscription Category:</label>
+                <select name="subscription" class="form-control" style="width:250px">
+                    <option value="">--- Select Category ---</option>
+                    @foreach ($member_cat as $key => $value)
+                    <option value="{{ $key }}">{{ $value }}</option>
+                    @endforeach
+                </select>
                                 </div><!--form-group-->
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                               
+                                <label for="subs">Subscription Costs:</label>
+                                
+                   
+                   
+                <select name='subs' class="form-control"style="width:250px" >
+                    
+                </select>
+
+
+
+
                                 </div><!--form-group-->
                             </div>
 
