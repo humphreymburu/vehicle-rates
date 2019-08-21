@@ -153,6 +153,7 @@ return [
                 'name' => 'Name',
                 'first_name' => 'First Name',
                 'last_name' => 'Last Name',
+                'registration_number' => 'Registration Number',
                 'update_information' => 'Update Information',
             ],
         ],
@@ -160,9 +161,9 @@ return [
         
         'vehicle' => [
                 'purchase_cost' => 'Actual Cost',
-                'category' => 'category',
                 'parking_cost'  => 'Parking Fines Cleaning',
                 'subscriptions_cost' => 'Subscriptions',
+                'registration_number' => 'Registration Number',
         ],
         
         

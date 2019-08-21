@@ -32,6 +32,10 @@ Route::get('vehicle/getrepairs/{id}','VehicleController@getRepairs');
 Route::get('vehicle/gettyres/{id}','VehicleController@getTyres');
 Route::get('vehicle/getfuel/{id}','VehicleController@getFuels');
 
+Route::get('vehicle/skills', function() {
+    return ['Laravel', 'Vue', 'PHP', 'Javascript', 'Tooling'];
+});
+
 
 /*
  * These frontend controllers require the user to be logged in

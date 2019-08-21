@@ -3,7 +3,14 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100,300,400,500');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500');
+
 // Bootstrap Overrides
+
 @import 'variables';
 
 // Bootstrap
@@ -12,13 +19,28 @@
 // Pages
 @import 'pages/dashboard';
 
+@font-face {
+    font-family: Roboto;
+    src: url('/public/fonts/Roboto-Light.ttf');
+    
+    font-family: PT Sans;
+    src: url('/public/fonts/PTSans-Bold.tff');
+
+    
+}
+
 
 .table td, .table th {
     padding: 0.3rem !important;
   }
 
-h4 {
-    color: #055F43 !important;
+h1 {
+    color: #2E7463  !important;
+    font-size: 2.5rem !important;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300 !important;
+    line-height: 55px;
+    font-size: 2.5rem;
 }
 
 .table-responsive {
@@ -26,5 +48,146 @@ h4 {
 }
 
 .wrapper {
-    background-color: #fcfefe;
+    background-color: #FAFCFB;
+}
+
+.hide {
+    display: none;
+}
+
+.form-group {
+    margin-bottom: 1.8rem !important;
+}    
+
+
+hr.main_divider--short {
+    width: 15%;
+    max-width: 200px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgba(37,37,37,0.4);
+    margin: 20px auto;
+    padding: 0;
+ 
+
+}    
+
+
+
+.btn-success {
+    background-color: #FCD91D !important;
+    border-color: #FCD91D !important;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+}
+
+
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open>.dropdown-toggle.btn-success {
+    background-color: rgb(20, 65, 18) !important;
+    border-color: rgb(20, 65, 18)!important; /*set the color you want here*/
+}
+
+
+label {
+    color: #3C3744 !important;
+    font-weight: 600;
+    display: none !important;
+} 
+
+.card-body {
+    margin-bottom: 0px;
+}  
+
+.card {
+    margin-bottom: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(20,40,60,.03);
+}
+
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #fff;
+    border-bottom: 0 solid transparent;
+}
+
+
+.header {
+    margin-top: 35px;
+    text-align: center;
+}
+
+
+.header_two {
+    margin-bottom: 50px;
+    
+}
+
+.header_three {
+    text-align: center;
+    color: #3C3744;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    font-size: 1.4rem;  
+}
+
+.navbar {
+    padding: 1rem 1rem !important;
+    border-bottom: 1px solid #edeef0;
+    box-shadow: 0 0 2rem 0 rgba(53,64,82,.1);
+    background-color: #fff!important;
+}    
+
+.bg-secondary {
+    background: #e9ecef !important;
+}
+
+
+a.navbar-brand.logo img {
+    width: 90px;
+    height: 90px;
+}
+
+.form-control {
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+}   
+
+.nav-link {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
 }

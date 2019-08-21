@@ -28,7 +28,7 @@ class VehicleRequest extends FormRequest
     {
         return [
             'purchase_cost' => ['required'],
-            'category' => ['required'],
+            //'category' => ['required'],
             'g-recaptcha-response' => ['required_if:captcha_status,true', 'captcha'],
         ];
     }

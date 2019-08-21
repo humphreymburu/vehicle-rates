@@ -26,7 +26,8 @@
         "spatie/laravel-html": "^2.4",
         "spatie/laravel-permission": "^2.36",
         "torann/geoip": "^1.0",
-        "kris/laravel-form-builder": "1.6.*"
+        "kris/laravel-form-builder": "1.6.*",
+        "dingo/api": "^2"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",

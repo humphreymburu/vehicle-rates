@@ -16,9 +16,15 @@
         </div><!--col-->
     </div><!--row-->
 
+<div>
+    <test-component></test-component>
+
+    </div>
+
+
     <div class="row mb-4">
         <div class="col">
-            <example-component></example-component>
+         <example-component></example-component>
         </div><!--col-->
     </div><!--row-->
 

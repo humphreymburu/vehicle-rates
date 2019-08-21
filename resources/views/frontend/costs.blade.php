@@ -4,17 +4,21 @@
 
 @section('content')
     <div class="row justify-content-center">
-        <div class="col col-sm-8 align-self-center">
+        <div class="col col-sm-12 align-self-center">
 
-       <h4 align="center"><strong> Vehicle Running Cost</strong></h4>
+       
        <br/>
-      
-       @if (session('status'))
-    <div class="alert alert-success">
-        {{ session('status') }}
-    </div>
-@endif
-<div class="table-responsive">
+  
+
+<div class="row flex-md-row">
+<div class="col-12 col-md-7">
+              <div class="text-center mb-5">
+                <h1 class="h2 mb-2">Vehicle Running Cost</h1>
+                <span>September 2019</span>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-12 col-lg-9">
+                <div class="table-responsive">
 
 <table class="table table-borderless" style="padding: .2rem 1 important;">
   <thead>
@@ -126,7 +130,7 @@
 
     <tr>
       <th scope="row"></th>
-      <td>Tyres and Tubes </td>
+      <td>Tyres and Tubes</td>
       <td>{{$tyres_cost}}</td>
       <td></td>
       <td></td>
@@ -142,6 +146,13 @@
 </table>
 
 
+
+</div>
+                </div>
+              </div>
+            </div>
+</div>
+</div>
 
 </div>
 @endsection

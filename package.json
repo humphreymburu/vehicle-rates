@@ -1,6 +1,5 @@
 {
     "name": "@rappasoft/laravel-5-boilerplate",
-    "author": "rappasoft rappa819@gmail.com",
     "private": true,
     "license": "MIT",
     "scripts": {
