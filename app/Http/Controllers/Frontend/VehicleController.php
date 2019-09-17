@@ -255,9 +255,15 @@ class VehicleController extends Controller
 
         $fixed_cost = $liscence_cost +  $parking_cost + $subscription_cost + $insurance_amount + $interest_total + $depreciation_amount;
         
-        
-      
 
+
+        //fixed cost per km
+        $fixed_costs_km = round ($fixed_cost / 30000, 2);
+      
+        
+
+        
+    
         //Operating Cost
 
         $oil_cost = $request->input('oils');
@@ -273,19 +279,23 @@ class VehicleController extends Controller
         $distance = $this->getDistance($capacity_id);
       
 
-        $fuel_cost = new runningCost($fuel_worth, $distance);
+        $fuel_cost = new runningCost($fuel_worth, $distance,);
         $fuel = $fuel_cost->fuelCalc();
 
 
     
         $operating_costs = $oil_cost + $services_cost + $repairs_cost + $tyres_cost + $fuel;
 
+       
+        //Total Running Cost per KM
+
+        
+        $running_cost = $fixed_costs_km + $operating_costs;
 
         
         
         
-        
-        return view('frontend.costs')->with(compact('fixed_cost','operating_costs','parking_cost','liscence_cost','depreciation_amount','interest_total','subscription_cost','insurance_amount','parking_cost','oil_cost','services_cost','repairs_cost','tyres_cost','drive', 'fuel'));
+        return view('frontend.costs')->with(compact('fixed_cost','operating_costs','parking_cost','liscence_cost','depreciation_amount','interest_total','subscription_cost','insurance_amount','parking_cost','oil_cost','services_cost','repairs_cost','tyres_cost','drive', 'fuel', 'fixed_costs_km', 'running_cost'));
     }
 
 

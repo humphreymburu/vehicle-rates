@@ -11,6 +11,8 @@ class runningCost {
 
     protected $distance;
 
+    protected $total_fixed;
+
 
 
     
@@ -43,6 +45,9 @@ class runningCost {
 
         return $fuel_costs;
     }
+
+
+
 
 
     
