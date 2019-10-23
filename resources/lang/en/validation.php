@@ -184,6 +184,19 @@ return [
                     'timezone' => 'Timezone',
                     'language' => 'Language',
                 ],
+
+
+                'plan' => [
+                    'name' => 'Name',
+                    'description' => 'Description',
+                    'price' => 'Price',
+                    'invoice_period' => 'Invoice Period',
+                    'invoice_interval' => 'Invoice Interval',
+                    'trial_period' => 'Trial Period',
+                    'trial_interval' => 'Trial Interval',
+                    'sort_order' => 'Sort',
+                    'currency' => 'Currency',
+                ],
             ],
         ],
 

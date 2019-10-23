@@ -24,6 +24,14 @@ return [
                 'main' => 'Roles',
             ],
 
+            'plan' => [
+                'all' => 'All Plans',
+                'create' => 'Create Plan',
+                'edit' => 'Edit Plan',
+                'management' => 'Plan Management',
+                'main' => 'Plans',
+            ],
+
             'users' => [
                 'all' => 'All Users',
                 'change-password' => 'Change Password',

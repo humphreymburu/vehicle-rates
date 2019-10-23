@@ -50,6 +50,13 @@ return [
                 ],
             ],
 
+
+            'plans' => [
+                'create' => 'Create Plan',
+                'edit' => 'Edit Plan',
+                'management' => 'Plan Management',
+            ],
+
             'users' => [
                 'active' => 'Active Users',
                 'all_permissions' => 'All Permissions',

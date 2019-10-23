@@ -183,6 +183,12 @@ return [
         // Package Service Providers that aren't auto-discover...
         Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
 
+       /**
+        * Third Party Service Providers...
+        */
+      // Gerardojbaez\Laraplans\LaraplansServiceProvider::class,
+
+
         // Application Service Providers...
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\Auth\Role\RoleController;
 use App\Http\Controllers\Backend\Auth\User\UserController;
+use App\Http\Controllers\Backend\Auth\Plan\PlanController;
 use App\Http\Controllers\Backend\Auth\User\UserAccessController;
 use App\Http\Controllers\Backend\Auth\User\UserSocialController;
 use App\Http\Controllers\Backend\Auth\User\UserStatusController;
@@ -16,6 +17,13 @@ Route::group([
     'namespace' => 'Auth',
     'middleware' => 'role:'.config('access.users.admin_role'),
 ], function () {
+
+   // Plan Management
+   Route::group(['namespace' => 'Plan'], function () {
+    Route::get('plan/create', [PlanController::class, 'create'])->name('plan.create');
+    Route::get('plan', [PlanController::class, 'index'])->name('plan.index');
+   });
+
     // User Management
     Route::group(['namespace' => 'User'], function () {
         // User Status'
@@ -26,6 +34,10 @@ Route::group([
         Route::get('user', [UserController::class, 'index'])->name('user.index');
         Route::get('user/create', [UserController::class, 'create'])->name('user.create');
         Route::post('user', [UserController::class, 'store'])->name('user.store');
+
+        Route::get('plan/create', [PlanController::class, 'create'])->name('plan.create');
+        Route::get('plan', [PlanController::class, 'index'])->name('plan.index');
+
 
         // Specific User
         Route::group(['prefix' => 'user/{user}'], function () {

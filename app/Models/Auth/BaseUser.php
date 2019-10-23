@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Auth\Traits\SendUserPasswordReset;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use OwenIt\Auditing\Contracts\Auditable as AuditableInterface;
+use Rinvex\Subscriptions\Traits\HasSubscriptions;
 
 /**
  * Class User.
@@ -21,6 +22,7 @@ class BaseUser extends Authenticatable implements AuditableInterface
         Notifiable,
         SendUserPasswordReset,
         SoftDeletes,
+        HasSubscriptions,
         Uuid;
 
     /**

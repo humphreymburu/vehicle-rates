@@ -47,6 +47,14 @@
                         <li class="nav-item">
                             <a class="nav-link {{
                                 active_class(Active::checkUriPattern('admin/auth/role*'))
+                            }}" href="{{ route('admin.auth.plan.index') }}">
+                                @lang('labels.backend.access.plans.management')
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link {{
+                                active_class(Active::checkUriPattern('admin/auth/role*'))
                             }}" href="{{ route('admin.auth.role.index') }}">
                                 @lang('labels.backend.access.roles.management')
                             </a>

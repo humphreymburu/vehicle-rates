@@ -7,6 +7,7 @@ use App\Models\Auth\Traits\Method\UserMethod;
 use App\Models\Auth\Traits\Attribute\UserAttribute;
 use App\Models\Auth\Traits\Relationship\UserRelationship;
 
+
 /**
  * Class User.
  */
@@ -16,4 +17,5 @@ class User extends BaseUser
         UserMethod,
         UserRelationship,
         UserScope;
+        
 }
