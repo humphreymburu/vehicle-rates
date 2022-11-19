@@ -64,6 +64,6 @@
         "node": ">=6.0.0"
     },
     "dependencies": {
-        "webpack-cli": "^3.3.6"
+        "webpack-cli": "^3.3.12"
     }
 }
